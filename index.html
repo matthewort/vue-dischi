@@ -16,12 +16,9 @@
 
         <div v-for="disc in album" class="blocks">
           <img :src="disc.poster" alt="">
-          {{disc.title}}
-          <br>
-          {{disc.author}}
-          <br>
-          {{disc.year}}
-
+          <p>{{disc.title}}</p>
+          <p>{{disc.author}}</p>
+          <p>{{disc.year}}</p>
         </div>
 
       </div>
