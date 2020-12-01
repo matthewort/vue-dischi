@@ -10,13 +10,21 @@
   <body>
 
     <div id="app">
+      <div class="container">
 
-        <div v-for="disc in album">
+
+
+        <div v-for="disc in album" class="blocks">
+          <img :src="disc.poster" alt="">
           {{disc.title}}
+          <br>
           {{disc.author}}
-          <!-- <img :src="disc.poster" alt=""> -->
+          <br>
+          {{disc.year}}
+
         </div>
 
+      </div>
     </div>
 
 
