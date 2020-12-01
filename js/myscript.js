@@ -19,9 +19,8 @@ var app = new Vue({
     // for (i=0; i<10; i++) {
     axios.get(dischi) //fai partire questa richiesta col metodo get a questa url
     .then((response) => { //se la richiesta va a buon fine allora esegui
-    const title = response.data.response[0].title;
-    const author = response.data.response[0].author;
-    this.album.push(title, author);
+    const content = response.data.response;
+    this.album = content
     });
     // }
   }

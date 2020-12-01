@@ -11,10 +11,10 @@
 
     <div id="app">
 
-        <div class="">
-          <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
-          <br>
-          {{album}}
+        <div v-for="disc in album">
+          {{disc.title}}
+          {{disc.author}}
+          <!-- <img :src="disc.poster" alt=""> -->
         </div>
 
     </div>
