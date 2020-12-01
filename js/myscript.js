@@ -13,15 +13,15 @@ const email = 'https://flynn.boolean.careers/exercises/api/random/mail';
 var app = new Vue({
   el: '#app',
   data: {
-    mail: []
+    album: []
   },
   mounted: function () {
     // for (i=0; i<10; i++) {
     axios.get(dischi) //fai partire questa richiesta col metodo get a questa url
     .then((response) => { //se la richiesta va a buon fine allora esegui
-    const result = response.data.response[0];
-    this.mail.push(result);
-    console.log(result);
+    const title = response.data.response[0].title;
+    const author = response.data.response[0].author;
+    this.album.push(title, author);
     });
     // }
   }
